@@ -68,6 +68,10 @@ function randomValue (min, max) {
     
 }
 
+//return a round random number between 1 to 3 (included)
+
+let computerRandomValue = randomValue(1,3);
+
 
 
 
