@@ -72,7 +72,26 @@ function randomValue (min, max) {
 
 let computerRandomValue = randomValue(1,3);
 
+//return computer's weapon result
 
+console.log(computerRandomValue)
+
+function computerPlay () {
+
+    if (computerRandomValue === 1) {
+        return 'Rock';
+    }
+    else if (computerRandomValue === 2) {
+        return 'Paper'
+    }
+    else {
+        return 'Scissors'
+    }
+    
+}
+
+
+console.log(computerPlay());
 
 
 
