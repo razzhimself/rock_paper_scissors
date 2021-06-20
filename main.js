@@ -14,7 +14,7 @@
 // evaluates which value is 'stronger' and returns result
 // as win (1 point) , the program runs the same function 
 // for namerous rounds , the one who reached 5 wins first , wins.
-//  
+
 // 2. Plan
 //Q-Does your program have a user interface? 
 
@@ -48,8 +48,6 @@
 //detrmine which value is greater and decide who won the round.
 // count user/computer wins , first to reach 5 wins , end the game and return a message.
 
-
-
 //Pseudo Code
 
 //when the user enters a string input of chosen weapon (out of 3) via prompt
@@ -61,7 +59,6 @@
 //else end the game and return a message with the announcment of the winner.
 
 
-// 3. Divide and Conquer
 
- 
+
 
