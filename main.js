@@ -62,26 +62,31 @@
 
  
 
-//return a round random number between min to max (included)
-function randomValue (min, max) {
+
+
+
+
+//return computer's weapon result
+
+function computerPlay () {
+
+    //return a round random number between min to max (included)
+
+    function getRndInteger (min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
     
 }
 
 //return a round random number between 1 to 3 (included)
 
-let computerRandomValue = randomValue(1,3);
+let randomValue = getRndInteger(1,3);
 
-//return computer's weapon result
+console.log(randomValue)
 
-console.log(computerRandomValue)
-
-function computerPlay () {
-
-    if (computerRandomValue === 1) {
+    if (randomValue === 1) {
         return 'Rock';
     }
-    else if (computerRandomValue === 2) {
+    else if (randomValue === 2) {
         return 'Paper'
     }
     else {
