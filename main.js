@@ -58,6 +58,16 @@
 //add one to either user/computer win-counter-variable.
 //else end the game and return a message with the announcment of the winner.
 
+// 3. Divide and Conquer
+
+ 
+
+//return a round random number between min to max (included)
+function randomValue (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+    
+}
+
 
 
 
