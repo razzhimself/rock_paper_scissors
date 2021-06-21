@@ -100,6 +100,10 @@ let randomValue = getRndInteger(1,3);
 const computerSelection = computerPlay();
 
 
+//user enters his chosen weapon via prompt 
+let playerSelection = prompt("Choose your weapon Rock,Paper or Scissors", "").toLowerCase();
+
+ 
 
 
 
