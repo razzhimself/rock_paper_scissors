@@ -81,22 +81,26 @@ function computerPlay () {
 
 let randomValue = getRndInteger(1,3);
 
-console.log(randomValue)
 
     if (randomValue === 1) {
-        return 'Rock';
+        return 'rock';
     }
     else if (randomValue === 2) {
-        return 'Paper'
+        return 'paper'
     }
     else {
-        return 'Scissors'
+        return 'scissors'
     }
     
 }
 
 
-console.log(computerPlay());
+
+// computer's weapon is randomly chosen.
+const computerSelection = computerPlay();
+
+
+
 
 
 
