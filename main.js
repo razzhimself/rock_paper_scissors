@@ -101,7 +101,12 @@ const computerSelection = computerPlay();
 
 
 //user enters his chosen weapon via prompt 
-let playerSelection = prompt("Choose your weapon Rock,Paper or Scissors", "").toLowerCase();
+
+function userPlay () {
+    return prompt("Choose your weapon Rock,Paper or Scissors", "").toLowerCase();
+} 
+
+const playerSelection = userPlay();
 
  //one round in a game , compares user's weapon selection vs computer's weapon
 // then returns the appropiate result for the different cases.
@@ -124,12 +129,46 @@ function playRound(playerSelection, computerSelection) {
         return 'You Win! Scissors beats Paper';
     } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
         return 'It\'s a tie!';
-    } else {return 'Choose a valid weapon - either Rock,Paper or Scissors';}
+    } else if (playerSelection === null) {
+        return; 
+    } else {
+        return 'Choose a valid weapon - either Rock,Paper or Scissors';
+    }
   }
   
 
-  console.log(playRound(playerSelection, computerSelection));
-  console.log('computer\'s weapon:', computerSelection);
+  //console.log(playRound(playerSelection, computerSelection));
+  //console.log('computer\'s weapon:', computerSelection);
+
+
+
+  function evaluation () {
+    let userScore = 0; 
+    let computerScore = 0;
+    let roundResult = playRound(playerSelection, computerSelection);
+
+
+    if (userScore < 5 && computerScore < 5 && roundResult === 'You Win! Rock beats Scissors' ||roundResult === 'You Win! Paper beats Rock' || roundResult === 'You Win! Scissors beats Paper' )  {
+       //add one win to user's score.
+       
+       return 'user\'s wins:' //,userScore;
+       //userScore += 1 
+        
+} else if (userScore < 5 && computerScore < 5 && roundResult === 'You Lose! Paper beats Rock' || roundResult === 'You Lose! Scissors beats Paper' || roundResult === 'You Lose! Rock beats Scissors') { 
+    //add one win to computer's score.
+    
+    return 'computer\'s wins:' //computerScore += 1 ,  //, computerScore;
+       
+} else {
+    return 'tie...'
+}
+}
+
+//console.log(evaluation());
+
+//play a 5 round game that keeps score and reports a winner or loser at the end.
+
+
 
 
 
